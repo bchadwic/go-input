@@ -37,7 +37,7 @@ name, _ := ui.Ask(query1, &input.Options{
 fmt.Println(name)
 
 re, _ := regexp.Compile(`^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$`)
-query2 := "Please enter your phone number: "
+query2 := "What is your phone number?"
 number, _ := ui.Ask(query2, &input.Options{
 	Required: true,
 	Loop:     true,
@@ -52,14 +52,14 @@ number, _ := ui.Ask(query2, &input.Options{
 fmt.Println(number)
 ```
 
-### Output
+##### Output
 
-```bash
+```
 What is your name?
 Enter a value (Default is tcnksm): 
 
 tcnksm
-Please enter your phone number: 
+What is your phone number?
 Enter a value: 253
 Failed to validate input string: please enter a valid phone number
 
